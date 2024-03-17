@@ -1,0 +1,99 @@
+--insert into event values('EV' || TO_CHAR(event_seqid.nextval),'썸네일','내용이미지','2024-01-01','2024-12-31','제목','내용');
+--teacher_info
+insert into teacher_info values('id1','예진','000423','여자','이메일@naver.com','010-8734-4177','pw1','예진에몽','sol','고등교사','k1048df8');
+insert into teacher_info values('id2','이름','000101','남자','이메일@naver.com','010-1234-5678','pw2','김이름','sol','중등교사','k1048df9');
+
+--workplace_T
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'강의 이름1',150000,150,1,1,1,'썸네일1','정보','기타텍스트','비디오링크');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'강의 이름2',10000,50,1,1,1,'썸네일2','정보','기타텍스트','비디오링크');
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'dlfma6',10000,50,1,1,1,'썸네일2','정보','기타텍스트','비디오링크');
+
+insert into workplace_T values('WT' || TO_CHAR(WT_seqid.nextval),'dlfma6',10000,50,1,1,1,'썸네일2','정보','기타텍스트','비디오링크');
+
+
+--delete from workplace_T where WT_Video='비디오링크';
+--delete from WTT where teacher_id='id2';
+--wt_test_q
+insert into wt_test_q values('WT1','wt1_test',1,2,4,3,2,4,1,2,3,1);
+insert into wt_test_q values('WT2','wt2_test',1,2,4,3,2,1,1,2,3,1);
+insert into wt_test_q values('WT4','wt4_test',1,2,4,3,2,2,1,2,3,1);
+insert into wt_test_q values('WT5','wt1_test',1,1,1,1,1,1,1,1,1,1);
+insert into wt_test_q values('WT2','wt2_test',2,2,2,2,2,2,2,2,2,2);
+
+--WTT
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT21','id1',sysdate);
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT3','id1',sysdate);
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT2','id1',sysdate);
+insert into WTT (WTT_Key,WT_Key,teacher_id,WTT_payment_date)values('WTT' || TO_CHAR(WTT_seqid.nextval),'WT1','id2',sysdate,sysdate+30);
+--wtt_test_a
+insert into wtt_test_a (WTT_Key)values('WTT41');
+insert into wtt_test_a (WTT_Key)values('WTT42');
+insert into wtt_test_a (WTT_Key)values('WTT43');
+--시험제출시 insert문
+update wtt_test_a set teat_a1 =1,teat_a2=2,teat_a3=3,teat_a4=4,teat_a5=1,teat_a6=2,teat_a7=2,teat_a8=4,teat_a9=1,teat_a10=4, test_aa=3 where WTT_Key='WTT41';
+select * from wtt_test_a;
+--@Update("update wtt_test_a set teat_a1 =#{teat_a1},teat_a2=#{teat_a2},teat_a3=#{teat_a3},teat_a4=#{teat_a4},"+
+--	"teat_a5=#{teat_a5},teat_a6=#{teat_a6},teat_a7=#{teat_a7},teat_a8=#{teat_a8},teat_a9=#{teat_a9},teat_a10=#{teat_a10}, test_aa=#{teat_aa} "+
+--			"where WTT_Key=#{WTT_Key}")
+
+update wtt_test_a set teat_a1 =1,teat_a2=1,teat_a3=1,teat_a4=1,teat_a5=1,teat_a6=1,teat_a7=1,teat_a8=1,teat_a9=1,teat_a10=1, test_aa=3 where WTT_Key='WTT41';
+--cart
+insert into cart values('id1','WT2');
+insert into cart values('id1','WT3');
+insert into cart values('id2','WT21');
+
+--noti
+insert into notification values('noti' || TO_CHAR(noti_seqid.nextval),'WT34','공지사항1','공지내용1',sysdate);
+delete from notification where wt_key='wt34';
+
+--Q
+insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT63','수료기준 문의','수료기준이 궁금합니다.',0,sysdate);
+--A
+insert into qna_a values('ak' || TO_CHAR(ak_seqid.nextval),'qk1','강의80퍼 시험 60점이여',sysdate);
+update qna_q set q_a_check=1 where q_key='qk1';
+COMMIT;
+
+
+--test_q select
+select teat_q1, teat_q2, teat_q3, teat_q4, teat_q5, teat_q6, teat_q7, teat_q8, teat_q9, teat_q10 from wt_test_q q inner join WTT w on w.WT_Key = q.WT_Key where w.WTT_key = 'WTT41';
+
+select * from wt_test_q;
+select * from WTT;
+
+
+select WT_Title, WT_TrainingTime, WT_Video from workplace_T wt inner join WTT wtt on wt.WT_Key = wtt.WT_Key where wtt.wtt_Key = 'WTT41';
+
+
+select noti_Title, noti_content, noti_date
+from Notification n
+inner join workplace_T wt on n.WT_Key = wt.WT_Key
+where n.noti_key = 'qk2';
+
+
+----------------------------------
+
+
+select * from wtt;
+SELECT *
+  FROM wtt WHERE TO_CHAR(wtt_payment_date+30, 'yyyy-mm-dd hh24:mi:ss') < TO_CHAR(SYSDATE, 'yyyy-mm-dd hh24:mi:ss') and wtt_Completion=0;
+
+
+insert into qna_q values('qk' || TO_CHAR(qk_seqid.nextval),'WTT5','바보는 항상','나였고',1,sysdate);
+
+
+-----------------------------------
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb1.jpg','eventinfo1.jpg','2024-03-01','2024-03-31','3월 단체 신청 이벤트!!','a');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb3.jpg','eventinfo3.jpeg','2024-03-01','2024-04-01','3월의 개인 신청 이벤트! 새학기 혜택!','a');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb2.jpg','eventinfo2.jpg','2024-01-15','2024-04-26','2024 신규교사 임용 이벤트!','a');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb4.jpg','eventinfo4.jpeg','2024-02-29','2024-05-16','2024 연간 멤버십 수강원 혜택!','a');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb5.jpg','eventinfo5.jpg','2024-03-14','2024-05-25','카카오톡 친구추가 이벤트!','a');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event_Thumb6.jpg','eventinfo6.jpg','2024-03-15','2024-05-27','AI 개인화 맞춤 서비스 쌤아이★!','a');
+
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event1.jpg','eventinfo1.jpg','2024-01-01','2024-02-16','기간내 쇼핑하면 15% 할인!','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event2.png','eventinfo1.jpg','2023-11-08','2023-11-21','2023 행복상점 OPEN!','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event3.jpg','eventinfo1.jpg','2023-08-21','2023-09-22','2023 건전한 복권생활 만들기','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event4.png','eventinfo1.jpg','2023-07-07','2023-07-31','멘토스, 이월드 콜라보!','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event5.png','eventinfo1.jpg','2023-03-12','2023-09-12','강사진들의 진실한 리뷰를 작성해주세요!','ㅁ');
+insert into event values('EV' || TO_CHAR(event_seqid.nextval),'event6.jpg','eventinfo1.jpg','2023-05-16','2023-09-04','추운 겨울을 따뜻하게 해줄 이벤트!','ㅁ');
+
+commit;

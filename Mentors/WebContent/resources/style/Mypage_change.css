@@ -1,0 +1,182 @@
+div.Mentors_header {
+	width : 1280px;
+	margin : auto;
+}
+
+/* 마이페이지 틀 */
+div.main_div {
+	width: 1280px;
+	height: 1700px;
+	margin : 30px auto;
+	border : none;
+	border-radius : 20px;
+	box-shadow: 0 2px 24px 0 rgb(58, 59, 69, 15%) !important;
+	background-color : white;
+}
+
+div.div_box {
+	margin : auto;
+	width : 85%;
+	padding-top : 40px;
+}
+
+div.account_space {
+	display : flex;
+	width : 100%;
+	height : 60px;
+	margin-bottom : 30px;
+}
+
+.title_mypage {
+	width : 600px;
+	height : 80px;
+	margin : 30px auto;
+	font-size : 60px;
+	font-weight : bold;
+	letter-spacing : 5px;
+	text-align : center;
+	align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center;
+}
+
+/* 부제목들 */
+.category {
+	width: 300px;
+	height: 60px;
+	margin: 50px auto;
+	font-size : 35px;
+	font-weight : bold;
+	border : 1px solid rgb(0,69,126);
+	border-radius : 20px;
+	box-shadow: 0 2px 24px 0 rgb(0,69,126, 15%) !important;
+	background-color : white;
+	letter-spacing : 2px;
+	display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center;
+}
+
+/* 테이블 공간 간격 0 */
+.personal_info_table, .account_info_table, .work_in_table {
+	border-spacing: 15px;
+	margin: auto;
+}
+
+.td_left {
+	width: 160px;
+	height: 55px;
+	border : none;		
+	font-size : 17px;
+	font-weight : bold;
+}
+
+td.td_right {
+	width: 450px;
+	height: 55px;
+	border: none;
+	border-radius : 8px;
+	font-size : 17px;
+	padding-left : 10px;
+}
+
+input.td_right {
+	width: 450px;
+	height: 55px;
+	border: 1px solid black;
+	border-radius : 8px;
+	font-size : 17px;
+	padding-left : 10px;
+}
+
+input.td_right_readonly {
+	width: 450px;
+	height: 55px;
+	border: 1px solid black;
+	border-radius : 8px;
+	font-size : 17px;
+	padding-left : 10px;
+	background-color : #C3C1C1;
+}
+
+/* 버튼들 틀*/
+.Mypage_button {
+	display : flex;
+	width : 100%;
+	height : 50px;
+	margin : auto;
+	margin-top : 30px;
+	margin-bottom : 10px;
+	text-align : right;
+}
+
+
+/* 버튼 css */
+input.cancle{
+	width: 150px;
+    height: 50px;
+	border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    background-color: #b6b6b6;
+    margin-right : auto;
+}
+
+button.Mypage_change_button{
+	width: 150px;
+    height: 50px;
+	border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    background-color: #b6b6b6;
+}
+
+/* 버튼 효과 */
+button.Mypage_change_button:hover, input.cancle:hover {
+	background-color: #ff5345;
+	cursor : pointer;
+}
+
+button.Mypage_change_button:focus, input.cancle:hover {
+	font-size : 21px;
+}
+
+/* ------------------------------------------------------- */
+.div_card {
+	/*position: relative;
+	display: flex;
+	flex-direction: column;*/
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid #e3e6f0;
+	border-radius: .35rem;
+	margin-top: 15px;
+}
+
+.div_card-body {
+	flex: 1 1 auto;
+	min-height: 1px;
+	padding: 1.25rem
+}
+
+.div_card-header:first-child {
+	border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
+}
+
+.div_card-header {
+	padding: 0.20rem 1.0rem;
+	margin-bottom: 0;
+	background-color: #f8f9fc;
+	border-bottom: 1px solid #e3e6f0;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+    font-size:35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align : center;
+}
+.text-primary {
+    color: #00457E !important;
+}

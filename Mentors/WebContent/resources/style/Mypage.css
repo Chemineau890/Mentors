@@ -1,0 +1,276 @@
+.Mentors_header {
+	width : 1280px;
+	margin : auto;
+}
+
+/* 마이페이지 틀 */
+div.main_div {
+	width: 1280px;
+	max-height: 2400px;
+	margin : 30px auto;
+	border : none;
+	border-radius : 20px;
+	box-shadow: 0 2px 24px 0 rgb(58, 59, 69, 15%) !important;
+	background-color : white;
+}
+
+div.div_box {
+	margin : auto;
+	width : 85%;
+	padding-top : 40px;
+}
+
+div.account_space {
+	display : flex;
+	width : 100%;
+	height : 60px;
+	margin-bottom : 30px;
+}
+
+.title_mypage {
+	width : 400px;
+	height : 80px;
+	margin : 30px auto;
+	font-size : 60px;
+	font-weight : bold;
+	letter-spacing : 5px;
+	text-align : center;
+	align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center;
+}
+
+/* 부제목들 */
+.category {
+	width: 300px;
+	height: 60px;
+	margin: 50px auto;
+	font-size : 35px;
+	font-weight : bold;
+	border : 1px solid rgb(0,69,126);
+	border-radius : 20px;
+	box-shadow: 0 2px 24px 0 rgb(0,69,126, 15%) !important;
+	background-color : white;
+	letter-spacing : 2px;
+	display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center;
+}
+
+/* 테이블 공간 간격 0 */
+.personal_info_table, .account_info_table, .work_in_table {
+	border-spacing: 15px;
+	margin: auto;
+}
+
+.td_left {
+	width: 160px;
+	height: 55px;
+	border : none;		
+	font-size : 17px;
+	font-weight : bold;
+}
+
+td.td_right {
+	width: 450px;
+	height: 55px;
+	border: none;
+	border-radius : 8px;
+	font-size : 17px;
+	padding-left : 10px;
+}
+
+input.td_right {
+	width: 450px;
+	height: 55px;
+	border: 1px solid black;
+	border-radius : 8px;
+	font-size : 17px;
+	padding-left : 10px;
+}
+
+/* 결제내역 테이블 가장자리 설정 */
+table.payment_table {
+	width : 100%;
+	border-radius: 8px;
+}
+
+div.payment_div {
+	padding-top: 50px;
+	height: 100px;
+}
+
+div.div_payment {
+	width: 100%;
+	height: 150px;
+	padding: 4px;
+	margin: auto;
+	margin-right : 100px;
+	text-align : center;
+}
+
+div h2.category_payment {
+	width: 200px;
+	height: 50px;
+	border-radius: 8px;
+	border-top: 2px dashed black;
+	border-bottom: 2px dashed black;
+	text-align: center;
+	line-height: 50px;
+	margin: auto;
+}
+
+/* 결제내역 테이블 각 너비 설정 */
+th.payment_date {
+	border-bottom : 2px solid black;
+	width: 20%;
+}
+
+th.payment_title {
+	border-bottom : 2px solid black;
+	width: 60%;
+}
+
+th.payment_price {
+	border-bottom : 2px solid black;
+	width: 20%;
+}
+
+/* 버튼들 */
+.Mypage_button {
+	display : flex;
+	width : 100%;
+	height : 100px;
+	margin : 60px auto;
+	text-align : right;
+}
+
+a.Mypage_change {
+	width : 500px;
+	height : 50px;
+	border-radius : 7px;
+	font-size : 25px;
+	background-color : #00457E;
+	border-width : 0px 0px 1px;
+	border : 1px solid gray;
+	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
+	margin-right : auto;
+	text-align : center;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+a.Mypage_change:link {
+	color : white;
+}
+
+a.Mypage_change:visited {
+	color : white;
+}
+
+a.change_password {
+	width : 500px;
+	height : 50px;
+	border-radius : 7px;
+	background-color : #00457E;
+	border-width : 0px 0px 1px;
+	border : 1px solid gray;
+	box-shadow : 0px 1px 5px rgb(0, 69, 126, 60%);
+	text-align : center;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 50px;
+	font-size : 25px;
+}
+
+a.change_password:link {
+	color : white;
+}
+
+a.change_password:visited {
+	color : white;
+}
+
+input.delete_account{
+	width: 150px;
+    height: 50px;
+	border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    background-color: #b6b6b6;
+    margin-right : auto;
+}
+
+a.logout {
+	display: inline-block;
+	width : 150px;
+	height : 50px;
+	border : none;
+	border-radius : 8px;
+	font-size : 20px;
+	color : black;
+	text-align : center;
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 50px;
+	background-color: #b6b6b6;
+}
+
+/* 버튼 효과 */
+input.change_account:hover, input.change_password:hover {
+	font-size : 26px;
+	cursor : pointer;
+}
+
+input.change_account:focus, input.change_password:focus {
+	font-size : 24px;
+}
+
+input.delete_account:hover {
+	background-color: #ff5345;
+	cursor : pointer;
+}
+
+a.logout:hover {
+	background-color: #ff5345;
+}
+/* ------------------------------------------------------- */
+.div_card {
+	/*position: relative;
+	display: flex;
+	flex-direction: column;*/
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid #e3e6f0;
+	border-radius: .35rem;
+	margin-top: 15px;
+}
+
+.div_card-body {
+	flex: 1 1 auto;
+	min-height: 1px;
+	padding: 1.25rem
+}
+
+.div_card-header:first-child {
+	border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
+}
+
+.div_card-header {
+	padding: 0.20rem 1.0rem;
+	margin-bottom: 0;
+	background-color: #f8f9fc;
+	border-bottom: 1px solid #e3e6f0;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+    font-size:35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align : center;
+}
+.text-primary {
+    color: #00457E !important;
+}

@@ -1,0 +1,229 @@
+.all_my_room {
+	width: 1280px;
+	text-align: center;
+	margin: auto;
+}
+
+.all2 {
+	display: block;
+	/* border: 2px solid rgb(195, 190, 190);*/
+	width: 90%;
+	margin: auto;
+	padding: 5px;
+}
+
+.title_div {
+	width: 100%;
+}
+
+.Tbox_all {
+	width: 1200px;
+	text-align: center;
+}
+
+.Tbox_all a {
+	display: inline-block;
+}
+
+.Tbox {
+	width: 150px;
+	height: 90px;
+	line-height: 90px;
+	/* 
+        [ine-height]
+        텍스트 세로 정렬을 부모 높이에 맞춤
+         height 값과 동일 해야함!!!!!!
+         heigh 수정시 같이 수정할 것!!
+        */
+	text-align: center;
+	border-radius: 5px;
+}
+/*
+		Tbox_1 ,Tbox_2 오른쪽으로 바꾸기 
+		*/
+.Tbox_0 {
+	margin-left: 30px;
+	background-color: rgb(255, 205, 25, 50%);
+}
+
+.Tbox_1 {
+	margin-left: 30px;
+	background-color: rgb(160, 155, 255, 50%);
+}
+
+.Tbox_2 {
+	margin-left: 30px;
+	background-color: rgb(0, 69, 126, 50%);
+}
+
+.Tbox_3 {
+	margin-left: 30px;
+	background-color: rgb(255, 83, 69, 50%);
+}
+
+.Tbox_4 {
+	margin-left: 30px;
+	background-color: #000;
+	color: #fff;
+}
+
+.select_div {
+	width: 100%;
+	position: relative;
+}
+
+.div_sum {
+	position: absolute;
+	left: 30px;
+}
+
+.span_num {
+	color: #00457E;
+	font-weight: bold;
+}
+
+.span_num4 {
+	color: #fff;
+	font-weight: bold;
+}
+
+.WT_select {
+	position: absolute;
+	right: 30px
+}
+
+.WT {
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	display: block;
+	height: 120px;
+	border: 1px solid #00457E;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.WT:hover {
+	border-color: #00457E;
+	box-shadow: 3px 3px 15px rgb(0, 69, 126, 0.2);
+}
+
+.classbtn_div {
+	float: right;
+}
+
+.WT .WT_left {
+	width: 80%;
+}
+
+.WT_left td {
+	padding: 5px;
+}
+
+/* .colorbox_pos {
+	padding-right: 230px !important;
+}
+ */
+.WT .WT_schol_type {
+	border: 1px solid rgb(0, 69, 126);
+	background-color: rgb(0, 69, 126, 50%);
+	border-radius: 5px;
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+}
+
+.WT .WT_category {
+	border: 1px solid rgb(255, 205, 25);
+	margin-left: 5px;
+	background-color: rgb(255, 205, 25, 50%);
+	border-radius: 5px;
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+}
+
+.WT .WT_name {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.WT .time_span {
+	color: gray;
+}
+
+.WT .classbtn_div {
+	height: 100%;
+}
+
+.WT .classbtn {
+	height: 120px;
+	color: white;
+	border: 1px solid;
+	background-color: #00457E;
+	border-radius: 20px;
+	font-size: 15px;
+}
+
+#WT_area {
+	width: 100%;
+}
+/***********************************************************************/
+.WTT_Completion_div {
+	float: right;
+	border: 2px solid;
+	border-radius: 20px;
+	width: 80px;
+	display: inline-block;
+	border: 2px solid #ff5345;
+}
+
+.WTT_Completion_bc0 {
+	border-color: #A09BFF;
+	color: #A09BFF;
+	background-color: rgb(160, 155, 255, 15%);
+}
+
+.WTT_Completion_bc1 {
+	border-color: #00457E;
+	color: #00457E;
+	background-color: rgb(0, 69, 126, 15%);
+}
+
+.WTT_Completion_bc2 {
+	border-color: #FF5345;
+	color: #FF5345;
+	background-color: rgb(255, 83, 69, 15%);
+}
+.WTT_Completion_bc3 {
+	border-color: #000;
+	color: #fff;
+	background-color: #000;
+}
+.day_circle {
+	border-radius: 50%;
+	background-color: #FF5345;
+	color: white;
+	text-align: center;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.day_circle_end {
+	border-radius: 50%;
+	background-color: #00457E; color : white;
+	text-align: center;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+}
+
+.endBtnColor {
+	background-color: darkgray !important;
+}
